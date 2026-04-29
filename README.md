@@ -106,7 +106,6 @@ npx playwright test tests/search.spec.js --project chromium --headed
 
 ### Generate and view Allure report
 ```bash
-npm run test:with-report
 npm run report:open
 ```
 
