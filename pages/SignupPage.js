@@ -264,7 +264,7 @@ class SignupPage extends BasePage {
    */
   async getLoggedInUsername() {
     const text = await this.loggedAsText.textContent();
-    return text ? text.replace('Logged in as ', '') : '';
+    return text ? text.replace(' Logged in as ', '') : '';
   }
 
   /**
