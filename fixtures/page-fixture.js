@@ -1,6 +1,8 @@
 const { test: base } = require('@playwright/test');
 const HomePage = require('../pages/HomePage');
 const ProductsPage = require('../pages/ProductsPage');
+const LoginPage = require('../pages/LoginPage');
+const SignupPage = require('../pages/SignupPage');
 const EnvConfig = require('../config/env-config');
 
 // Create custom test fixture with page objects
@@ -14,6 +16,16 @@ const test = base.extend({
   productsPage: async ({ page }, use) => {
     const productsPage = new ProductsPage(page);
     await use(productsPage);
+  },
+
+  loginPage: async ({ page }, use) => {
+    const loginPage = new LoginPage(page);
+    await use(loginPage);
+  },
+
+  signupPage: async ({ page }, use) => {
+    const signupPage = new SignupPage(page);
+    await use(signupPage);
   },
 
   // Base setup fixture
